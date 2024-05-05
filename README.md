@@ -15,7 +15,7 @@ The peer-to-peer chat system consists of two main components in separate Python 
 <br>
 
 ## data sanitization and protection
- - Inside the p2pDataProjection folder.
+ - Inside the p2pDataProtection folder.
  - ### chatDB-new.py:
     - **Encryption of Sensitive User Data:** Usernames and IP addresses are encrypted before storage to protect sensitive information.
     - **Protection Against SQL Injection:** The use of SQLAlchemy's ORM utilizes parameterized queries, ensuring user inputs are treated as data rather than executable SQL code, effectively preventing SQL injection.
