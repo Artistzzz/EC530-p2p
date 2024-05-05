@@ -14,6 +14,15 @@ The peer-to-peer chat system consists of two main components in separate Python 
  - Network Communication: Direct socket connections are used for sending and receiving messages, supporting real-time peer-to-peer communication without needing a central server.
 <br>
 
+## data sanitization and projection
+ - Inside the p2pDataProjection folder.
+ - chatDB-new.py:
+    - Encryption of Sensitive User Data: Usernames and IP addresses are encrypted before storage to protect sensitive information.
+    - Protection Against SQL Injection: The use of SQLAlchemy's ORM utilizes parameterized queries, ensuring user inputs are treated as data rather than executable SQL code, effectively preventing SQL injection.
+ - p2pChat.py:
+    - Input Sanitization: User inputs are sanitized to prevent XSS and other potential injection vulnerabilities.
+    - Encryption Handling: Messages are encrypted before being sent and decrypted upon reception to secure communication.
+
 ## Running Process
 
 To run the application:
